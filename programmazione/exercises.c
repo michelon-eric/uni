@@ -2,6 +2,34 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+void lab1ex7(void) {
+    const int cells_count = 8;
+    const int king_row = 5;
+    const int king_col = 7;
+
+    for (int i = 0; i < cells_count + 2; i++) {
+        printf("-%s", i == cells_count + 1 ? "\n" : "");
+    }
+
+    for (int row = 0; row < cells_count; row++) {
+        printf("|");
+
+        for (int col = 0; col < cells_count; col++) {
+            if (row == king_row && col == king_col)
+                printf("K");
+            else if ((row % 2 == 0 && col % 2 != 0) || row % 2 != 0 && col % 2 == 0)
+                printf("#");
+            else printf(" ");
+        }
+
+        printf("|\n");
+    }
+
+    for (int i = 0; i < cells_count + 2; i++) {
+        printf("-%s", i == cells_count + 1 ? "\n" : "");
+    }
+}
+
 int lab2ex1(void) {
     int threshold = 0;
     scanf("%d", &threshold);

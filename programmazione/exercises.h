@@ -2,6 +2,8 @@
 #ifndef __EXERCISES_H__
 #define __EXERCISES_H__
 
+void lab1ex7(void);
+
 int lab2ex1(void);
 void lab2ex2(void);
 void lab2ex3(void);
