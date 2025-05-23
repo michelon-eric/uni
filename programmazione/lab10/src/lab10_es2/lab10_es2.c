@@ -59,7 +59,6 @@ int main(){
     print_list(list);
 
     //raddoppio ogni elemento della lista (codice qui)
-    
     node_foreach(list, el, {
         el->info *= 2;
     });
@@ -72,7 +71,7 @@ int main(){
 }
 
 struct nodo* new_nodo(int val) {
-    struct nodo* node = (struct node*)malloc(sizeof(struct nodo));
+    struct nodo* node = (struct nodo*)malloc(sizeof(struct nodo));
     node->info = val;
     return node;
 }
@@ -87,6 +86,7 @@ void print_list(struct nodo* ptr) {
         printf("%d ", temp->info);
         temp = temp->next;
     }
+    printf("\n");
 }
 
 void pre_insert(struct nodo** pptr, int val) {
